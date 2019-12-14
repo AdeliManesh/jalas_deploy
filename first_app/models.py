@@ -1,5 +1,3 @@
-from contextlib import nullcontext
-
 from django.db import models
 
 
@@ -41,7 +39,7 @@ class Vote(models.Model):
 
 
 class Meeting(models.Model):
-    poll = models.ForeignKey(Poll,on_delete=models.CASCADE,default=nullcontext)
+    poll = models.ForeignKey(Poll,on_delete=models.CASCADE)
     start = models.CharField(max_length=264)
     end = models.CharField(max_length=264)
     meeting_url = models.CharField(max_length=264)
