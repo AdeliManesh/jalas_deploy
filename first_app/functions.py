@@ -5,7 +5,7 @@ from django.core.mail import send_mail
 from django.http import HttpResponse
 from setuptools.package_index import socket_timeout
 
-import views as fv
+from first_app import views as fv
 from first_app.models import Option, Vote, Meeting
 from untitled import settings
 
